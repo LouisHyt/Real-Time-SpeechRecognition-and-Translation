@@ -39,21 +39,21 @@ App.get("/", (req, res) => {
             }
         })
     } else {
-        res.sendFile(path.join(__dirname, '..', 'client', 'index.html'));
+        res.sendFile(path.join(__dirname, 'public', 'index.html'));
     }
 })
 
 App.get("/dashboard", requireAuth,(req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', "dashboard", 'dashboard.html'));
+    res.sendFile(path.join(__dirname, 'public', "dashboard", 'dashboard.html'));
 })
 
 
 App.get("/overlay", (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', "subtitles", 'subtitles.html'));
+    res.sendFile(path.join(__dirname, 'public', "subtitles", 'subtitles.html'));
 })
 
 App.get("/error", (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'error', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'error', 'index.html'));
 })
 
 //Utils
@@ -102,7 +102,7 @@ io.use(async (socket, next) => {
     })
 })
 
-App.use(express.static(path.join(__dirname, "..", "client")));
+App.use(express.static(path.join(__dirname, "public")));
 
 http.listen(PORT, () => {
     console.log(`server listening on port ${PORT}`)
