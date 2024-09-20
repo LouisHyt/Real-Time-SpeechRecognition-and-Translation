@@ -5,7 +5,7 @@
 - Créer un fichier .env <br />
 - Ajouter les champs suivants :<br />
 ```
-***PORT*** → Le port sur lequel le serveur se lancera
+PORT → Le port sur lequel le serveur se lancera
 ORIGIN → Url CORS pour le serveur websocket. Recommandé : http://localhost:PORT
 TWITCH_CLIENT_ID → Identifiant de l'application Twitch utilisé pour l'autentification (https://dev.twitch.tv)
 TWITCH_CLIENT_SECRET → Secret de l'application Twitch utilisé pour l'autentification (https://dev.twitch.tv)
