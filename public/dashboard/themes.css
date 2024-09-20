@@ -1,0 +1,97 @@
+.yami{
+    --bgColor: rgb(43,46,56);
+    --darker: rgb(38, 39, 47);
+    --lighter: rgb(70, 73, 87);
+    --bgSettings: rgb(49, 51, 58);
+    --textInfo: rgb(209, 207, 207);
+    --textSettings: rgb(255, 255, 255);
+    --textFields: rgb(255,255,255);
+    --textHover: rgb(76, 80, 95);
+    --buttonHover: rgb(152, 153, 157);
+    --accentColor: rgb(95, 100, 118);
+    --headerSettings: rgb(31, 33, 38);
+}
+
+.system{
+    --bgColor: rgb(255,255,255);
+    --darker: rgb(218, 218, 218);
+    --lighter: rgb(181, 181, 181);
+    --bgSettings: rgb(226, 234, 234);
+    --textInfo: rgb(90, 85, 85);
+    --textSettings: rgb(0, 0, 0);
+    --textFields: rgb(0, 0, 0);
+    --textHover: rgb(104, 104, 104);
+    --buttonHover: rgb(152, 153, 157);
+    --accentColor: rgb(104, 104, 104);
+    --headerSettings: rgb(191, 199, 199);
+}
+
+.rachni{
+    --bgColor: rgb(35,38,41);
+    --darker: rgb(41, 130, 106);
+    --lighter: rgb(145, 76, 103);
+    --bgSettings: rgb(182 237 255);
+    --textInfo: rgb(201, 200, 200);
+    --textSettings: rgb(0,0,0);
+    --textFields: rgb(255, 255, 255);
+    --textHover: rgb(219, 68, 125);
+    --buttonHover: rgb(0, 187, 210);
+    --accentColor: rgb(26, 179, 235);
+    --headerSettings: rgb(149, 194, 209);
+}
+
+.light{
+    --bgColor: rgb(229,229,229);
+    --darker: rgb(255, 255, 255);
+    --lighter: rgb(229, 229, 229);
+    --bgSettings: rgb(255, 255, 255);
+    --textInfo: rgb(90, 85, 85);
+    --textSettings: rgb(0, 0, 0);
+    --textFields: rgb(0, 0, 0);
+    --textHover: rgb(104, 104, 104);
+    --buttonHover: rgb(199, 199, 199);
+    --accentColor: rgb(137,137,137);
+    --headerSettings: rgb(227, 224, 224);
+}
+
+.grey{
+    --bgColor: rgb(47, 47, 47);
+    --darker: rgb(67, 67, 67);
+    --lighter: rgb(100, 100, 100);
+    --bgSettings: rgb(80, 80, 80);
+    --textInfo: rgb(183, 183, 183);
+    --textSettings: rgb(255, 255, 255);
+    --textFields: rgb(255, 255, 255);
+    --textHover: rgb(183, 183, 183);
+    --buttonHover: rgb(89, 89, 89);
+    --accentColor: rgb(155, 153, 153);
+    --headerSettings: rgb(48, 48, 48);
+}
+
+.dark{
+    --bgColor: rgb(31, 30, 31);
+    --darker: rgb(76, 76, 76);
+    --lighter: rgb(106, 106, 106);
+    --bgSettings: rgb(60, 60, 60);
+    --textInfo: rgb(183, 183, 183);
+    --textSettings: rgb(255, 255, 255);
+    --textFields: rgb(255, 255, 255);
+    --textHover: rgb(183, 183, 183);
+    --buttonHover: rgb(92, 91, 91);
+    --accentColor: rgb(139, 139, 139);
+    --headerSettings: rgb(38, 38, 38);
+}
+
+.acri{
+    --bgColor: rgb(24, 24, 25);
+    --darker: rgb(22, 36, 88);
+    --lighter: rgb(44, 65, 139);
+    --bgSettings: rgb(52, 70, 135);
+    --textInfo: rgb(203, 201, 201);
+    --textSettings: rgb(255, 255, 255);
+    --textFields: rgb(255, 255, 255);
+    --textHover: rgb(174, 201, 247);
+    --buttonHover: rgb(42, 58, 117);
+    --accentColor: rgb(74,129,247);
+    --headerSettings: rgb(38, 50, 92);
+}

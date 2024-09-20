@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/dashboard/themes.css">
+    <link rel="stylesheet" href="/dashboard/dashboard.css">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script type="module" src="/dashboard/dashboard.js" defer></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <img src="/dashboard/etoilesfanart.png" alt="fanart baghera" id="etoiles_fanart">
+    <div class="connectionInfos">
+        <div class="avatar_container">
+            <img id="avatar_img" src="" alt="Profil picture">
+        </div>
+        <i id="openSettings" class="uil uil-sliders-v"></i>
+        <i class="uil uil-signout" id="logout"></i>
+    </div>
+
+    <!-- Settings Page -->
+    <div id="settings">
+        <div id="settingsHeader">
+            <i id="closeSettings" class="uil uil-times"></i>
+            <h1>Paramètres</h1>
+        </div>
+        <div class="settingsBody">
+            <div class="formSettings">
+                <div class="field">
+                    <label for="themeSelect">Theme du dashboard</label>
+                    <select name="theme" id="themeSelect">
+                        <option value="Yami"selected>Yami</option>
+                        <option value="System">System</option>
+                        <option value="Rachni">Rachni</option>
+                        <option value="Light">Light</option>
+                        <option value="Grey">Grey</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Acri">Acri</option>
+                    </select>
+                </div>
+            </div>
+            <div class="socials">
+                <a class="iconSocial" href="https://twitter.com/Diox90" target="_blank">
+                    <i class="uil uil-twitter"></i>
+                    <p>@Diox90</p>
+                </a>
+                <a class="iconSocial" href="https://github.com/LouisDiox" target="_blank">
+                    <i class="uil uil-github"></i>
+                    <p>LouisDiox</p>
+                </a>
+                <a class="iconSocial" href="https://www.twitch.tv/louis_diox" target="_blank">
+                    <i class="uil uil-rss-interface"></i>
+                    <p>Louis_Diox</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="settingsOverlay"></div>
+
+    <!-- Content Page -->
+    <form id="config">
+        <div class="field f_mic">
+            <label for="micInfo">Contrôles</label>
+            <div class="controls">
+                <button class="start">
+                    <p class="startIcon">
+                        <i class="uil uil-play"></i>
+                    </p>
+                    <span class="startText"> Démarrer </span>
+                </button>
+                <button class="stop">
+                    <p class="stopIcon">
+                        <i class="uil uil-square-shape"></i>
+                    </p>
+                    <span> Stopper </span>
+                </button>
+            </div>
+        </div>
+        <div class="field">
+            <label for="langInSelect">Langue d'entrée</label>
+            <select name="langInSelect" id="langInSelect">-
+                <option value="fr" data-lang="fr-FR" selected>Français</option>
+                <option value="en" data-lang="en-US">Anglais</option>
+                <option value="pt" data-lang="pt-BR">Portugais</option>
+                <option value="es" data-lang="es-ES">Espagnol</option>
+                <option value="de" data-lang="de-DE">Allemand</option>
+                <option value="ja" data-lang="ja-JA">Japonais</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="langOutSelect" class="langOutSelectLabel">Langue de sortie</label>
+            <select name="langOutSelect" id="langOutSelect">
+                <option value="en" selected>Anglais</option>
+                <option value="fr">Français</option>
+                <option value="pt">Portugais</option>
+                <option value="es">Espagnol</option>
+                <option value="de">Allemand</option>
+                <option value="ja">Japonais</option>
+            </select>
+        </div>
+        <div class="field f_options">
+            <label>Options Avancées</label>
+            <div class="all_options">
+                <div class="subfield">
+                    <input type="checkbox" name="doubleTrad" id="doubleTrad">
+                    <label for="doubleTrad">Double traduction</label>
+                </div>
+                <div class="subfield">
+                    <input type="checkbox" name="ignoredWords" id="ignoredWords">
+                    <label for="ignoredWords">Mots ignorés</label>
+                    <textarea name="ignoredWordsList" id="ignoredWordsList" placeholder="Séparez les mots avec une virgule. Exemple : jean, cuisine, fraise" cols="30" rows="12"></textarea>
+                    <p class="infoField">Les mots seront remplacés par des ****</p>
+                </div>
+            </div>
+        </div>
+        <div class="field fd_langOut2">
+            <label for="langOutSelect2" class="langOutSelectLabel2">Langue de sortie #2</label>
+            <select name="langOutSelect2" id="langOutSelect2">
+                <option value="en" selected>Anglais</option>
+                <option value="fr">Français</option>
+                <option value="pt">Portugais</option>
+                <option value="es">Espagnol</option>
+                <option value="de">Allemand</option>
+                <option value="ja">Japonais</option>
+            </select>
+        </div>
+
+    <div class="subtilesLink">
+        <p>Lien de l'overlay OBS</p>
+        <div class="link">
+            <i class="uil uil-copy copyLink"></i>
+            <span class="obsUrl main"></span>
+            <div class="copysuccess">
+                <p>Copié avec succès !</p>
+            </div>
+        </div>
+        <p class="infolang">* Langue 1</p>
+        <div class="link multi">
+            <i class="uil uil-copy copyLink"></i>
+            <span class="obsUrl multi"></span>
+            <div class="copysuccess">
+                <p>Copié avec succès !</p>
+            </div>
+        </div>
+        <p class="infolang">* Langue 2</p>
+    </div>
+</body>
+    
+</html>
